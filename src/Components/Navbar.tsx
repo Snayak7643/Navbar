@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { IoLogoDesignernews, IoIosList } from "react-icons/io";
 
 const Navbar = () => {
+  const handleClick = () => {
+    if (show === "social-icons") setShow("show-icons");
+    else {
+      setShow("social-icons");
+    }
+  };
+
+  const [show, setShow] = useState("social-icons");
+
   return (
     <nav>
       <div className="nav-center">
         <div className="nav-header">
-          <img src="" className="logo" alt="logo" />
-          <button className="nav-toggle">Button</button>
+          <IoLogoDesignernews className="logo" />
+          <button className="nav-toggle" onClick={handleClick}>
+            <IoIosList />
+          </button>
         </div>
-        <div className="links-container">
+        <div className="link-container">
           <ul className="links">
             <li>
               <Link to="/">Home</Link>
@@ -22,7 +34,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <ul className="social-icons">
+        <ul className={show}>
           <li>
             <a href="https://www.google.com">Fb</a>
           </li>

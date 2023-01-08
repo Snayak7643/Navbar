@@ -159,10 +159,11 @@ nav {
 }
 .nav-toggle:hover {
   color: var(--clr-primary-1);
-  transform: rotate(90deg);
 }
 .logo {
   height: 40px;
+  font-size: 10rem;
+  background-image: linear-gradient(to right, white, aqua);
 }
 .links a {
   color: var(--clr-grey-3);
@@ -180,6 +181,18 @@ nav {
 }
 .social-icons {
   display: none;
+}
+.show-icons {
+  display: flex;
+  flex-direction: column;
+}
+.show-icons a {
+  margin: 0 0.5rem;
+  color: var(--clr-primary-5);
+  transition: var(--transition);
+}
+.show-icons a:hover {
+  color: var(--clr-primary-7);
 }
 .links-container {
   height: 0;
@@ -229,4 +242,8 @@ nav {
   .social-icons a:hover {
     color: var(--clr-primary-7);
   }
+}
+.center {
+  text-align: center;
+  margin-top: 5rem;
 }
