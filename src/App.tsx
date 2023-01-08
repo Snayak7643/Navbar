@@ -1,7 +1,14 @@
 import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  return <h1>Hello</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Link to="/">Google</Link>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
