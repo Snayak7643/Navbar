@@ -159,10 +159,11 @@ nav {
 }
 .nav-toggle:hover {
   color: var(--clr-primary-1);
-  transform: rotate(90deg);
 }
 .logo {
   height: 40px;
+  font-size: 10rem;
+  background-image: linear-gradient(to right, white, aqua);
 }
 .links a {
   color: var(--clr-grey-3);
@@ -186,6 +187,18 @@ nav {
   overflow: hidden;
   transition: var(--transition);
 }
+.social-icons {
+  display: flex;
+}
+.social-icons a {
+  margin: 0 0.5rem;
+  color: var(--clr-primary-5);
+  transition: var(--transition);
+}
+.social-icons a:hover {
+  color: var(--clr-primary-7);
+}
+
 .show-container {
   height: 10rem;
 }
@@ -229,4 +242,8 @@ nav {
   .social-icons a:hover {
     color: var(--clr-primary-7);
   }
+}
+.center {
+  text-align: center;
+  margin-top: 5rem;
 }
